@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+openai
+openai-whisper
+pyttsx3
+pydantic
+pydantic-settings
+python-multipart
+python-dotenv
+sqlalchemy
+aiofiles
+librosa
+soundfile
+numpy
+PyPDF2
+python-docx

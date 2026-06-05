@@ -1,0 +1,24 @@
+{
+  "name": "aura-pc-control",
+  "version": "1.0.0",
+  "description": "AURA AI - PC Command & Control Module. Hardware scanning, app launching, file management, script execution, system optimization, and real-time monitoring.",
+  "main": "backend/index.js",
+  "module": "frontend/index.js",
+  "scripts": {
+    "test": "node -e \"const pc = require('./backend/index'); pc.init().then(console.log).catch(console.error)\"",
+    "start-server": "node backend/server.js",
+    "status": "node -e \"const pc = require('./backend/index'); pc.getSystemReport().then(r => console.log(JSON.stringify(r.summary, null, 2))).catch(console.error)\""
+  },
+  "keywords": [
+    "aura",
+    "pc-control",
+    "system-monitor",
+    "hardware-scanner",
+    "system-optimizer"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.22.2"
+  }
+}

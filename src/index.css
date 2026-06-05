@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-jarvis-blue: #00B4FF;
+  --color-jarvis-dark: #0088FF;
+  --color-glass-bg: rgba(10, 25, 47, 0.7);
+  --color-glass-border: rgba(0, 180, 255, 0.3);
+  
+  --font-jarvis: "Orbitron", sans-serif;
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
+}
+
+:root {
+  background-color: transparent;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: transparent;
+  color: white;
+  font-family: var(--font-jarvis);
+  overflow: hidden;
+}
+
+.glass-panel {
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+.jarvis-glow {
+  text-shadow: 0 0 10px var(--color-jarvis-blue), 0 0 20px var(--color-jarvis-blue);
+}
+
+.jarvis-border-glow {
+  box-shadow: 0 0 15px var(--color-jarvis-blue);
+}
+
+/* Custom scrollbar for J.A.R.V.I.S. feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-jarvis-blue);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-jarvis-dark);
+}
